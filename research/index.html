@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Research by Kezhou (Melody) Lu and the Atmospheric and Climate Modeling Group." />
+    <title>Research | Kezhou Lu</title>
+    <link rel="icon" type="image/png" href="../home/figures/Icon.png?v=20260808" />
+    <link rel="stylesheet" href="../styles.css?v=20260810-research-card-galleries" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../home/">Kezhou (Melody) Lu</a>
+        <nav class="nav-links">
+          <a href="../home/">Home</a>
+          <a href="../research/">Research</a>
+          <a href="../group/">Group</a>
+          <a href="../publications/">Publications</a>
+          <a href="../teaching/">Teaching</a>
+          <a href="../contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section research-themes">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Research Themes</h2>
+          </div>
+          <div class="research-theme-grid">
+            <a class="research-theme-card" href="./precipitation-sst/">
+              <div class="research-theme-figure theme-card-gallery">
+                <img class="theme-card-gallery-image" src="./figures/precipitation-sst/SA_precipt_SST.png" alt="South Atlantic precipitation and sea surface temperature response" />
+                <span class="theme-card-gallery-label">How land precipitation contributes to SST pattern formation</span>
+                <button class="gallery-control previous" type="button" aria-label="Previous theme figure">&lsaquo;</button>
+                <button class="gallery-control next" type="button" aria-label="Next theme figure">&rsaquo;</button>
+              </div>
+              <h3>A Tale of Precipitation and Sea Surface Temperature</h3>
+              <p>Understanding the complex two-way interactions between precipitation and sea-surface temperature patterns, and how their coupling shapes large-scale atmospheric circulation and climate impacts around the world.</p>
+              <span class="theme-link">Explore research &amp; publications &rarr;</span>
+            </a>
+            <a class="research-theme-card" href="./land-climate-extremes/">
+              <div class="research-theme-figure land-extremes-figure theme-card-gallery land-card-gallery">
+                <img class="land-card-gallery-image" src="./figures/land-climate-extremes/mix-length-composite.gif" alt="Animated theoretical framework for midlatitude climate extremes" />
+                <span class="theme-card-gallery-label land-card-gallery-label">A simple framework to understand temperature variance</span>
+                <button class="gallery-control previous" type="button" aria-label="Previous extratropical extremes figure">&lsaquo;</button>
+                <button class="gallery-control next" type="button" aria-label="Next extratropical extremes figure">&rsaquo;</button>
+              </div>
+              <h3>Physical Scaling of Extratropical Climate Extremes</h3>
+              <p>Deriving simple theoretical frameworks to understand how large-scale atmospheric circulation interacts with land, ocean, and the hydrological cycle to shape mid- to high-latitude climate extremes.</p>
+              <span class="theme-link">Explore research &amp; publications &rarr;</span>
+            </a>
+            <a class="research-theme-card" href="./tropical-climate-dynamics/">
+              <div class="research-theme-figure theme-card-gallery tropical-card-gallery">
+                <img class="tropical-card-gallery-image" src="./figures/tropical-climate-dynamics/GRL21_Walker.png" alt="Walker circulation response figure" />
+                <span class="theme-card-gallery-label tropical-card-gallery-label">Mechanisms of Walker circulation changes to increasing CO<sub>2</sub></span>
+                <button class="gallery-control previous" type="button" aria-label="Previous tropical climate figure">&lsaquo;</button>
+                <button class="gallery-control next" type="button" aria-label="Next tropical climate figure">&rsaquo;</button>
+              </div>
+              <h3>Tropical Climate Dynamics Across Scales</h3>
+              <p>Studying tropical climate change and variability, with a focus on tropical air-sea interactions and their remote Earth-system impacts.</p>
+              <span class="theme-link">Explore research &amp; publications &rarr;</span>
+            </a>
+            <a class="research-theme-card" href="./neural-ode/">
+              <div class="research-theme-figure">
+                <img src="./figures/nerul-ode/NXRO_illustration.jpg" alt="Physics-informed AI framework for climate dynamics and prediction" />
+              </div>
+              <h3>Physics-Informed AI for Climate Dynamics and Prediction</h3>
+              <p>Combining simple, physically interpretable partial differential equations with AI tools to understand and predict complex climate dynamics.</p>
+              <span class="theme-link">Explore research &amp; publications &rarr;</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Kezhou (Melody) Lu. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const themeCardFigures = [
+        {
+          src: './figures/precipitation-sst/SA_precipt_SST.png',
+          alt: 'South Atlantic precipitation and sea surface temperature response',
+          label: 'How land precipitation contributes to SST pattern formation',
+        },
+        {
+          src: './figures/precipitation-sst/HS_landPr.png',
+          alt: 'Tropical basin precipitation sensitivity to sea surface temperature',
+          label: 'Precipitation sensitivity to SST and its remote impact',
+        },
+        {
+          src: './figures/precipitation-sst/NPSH_precipt_SST.png',
+          alt: 'North Pacific Subtropical High precipitation and sea surface temperature response',
+          label: 'Tropical origins of North Pacific subtropical high uncertainty',
+        },
+      ];
+
+      const themeCardImage = document.querySelector('.theme-card-gallery-image');
+      const themeCardLabel = document.querySelector('.theme-card-gallery-label');
+      const themeCardPreviousButton = document.querySelector('.theme-card-gallery .gallery-control.previous');
+      const themeCardNextButton = document.querySelector('.theme-card-gallery .gallery-control.next');
+      let activeThemeCardFigure = 0;
+
+      function showThemeCardFigure(index) {
+        activeThemeCardFigure = (index + themeCardFigures.length) % themeCardFigures.length;
+        const figure = themeCardFigures[activeThemeCardFigure];
+
+        themeCardImage.src = figure.src;
+        themeCardImage.alt = figure.alt;
+        themeCardLabel.textContent = figure.label;
+      }
+
+      themeCardPreviousButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showThemeCardFigure(activeThemeCardFigure - 1);
+      });
+
+      themeCardNextButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showThemeCardFigure(activeThemeCardFigure + 1);
+      });
+
+      const landCardFigures = [
+        {
+          src: './figures/land-climate-extremes/mix-length-composite.gif',
+          alt: 'Animated theoretical framework for midlatitude climate extremes',
+          label: 'A simple framework to understand temperature variance',
+        },
+        {
+          src: './figures/land-climate-extremes/LWA_and_Lagrangian_displacement.jpg',
+          alt: 'Local wave activity and Lagrangian displacement constraints on extratropical temperature distribution',
+          label: 'Dynamical Constraints on Extratropical Temperature Distribution',
+        },
+        {
+          src: './figures/land-climate-extremes/GRL26_TempVar_v1.png',
+          alt: 'Quantifying land-atmosphere contributions to wintertime midlatitude surface air temperature variability',
+          label: 'Quantifying land-atmosphere contributions to wintertime midlatitude surface air temperature variability',
+        },
+      ];
+
+      const landCardImage = document.querySelector('.land-card-gallery-image');
+      const landCardLabel = document.querySelector('.land-card-gallery-label');
+      const landCardPreviousButton = document.querySelector('.land-card-gallery .gallery-control.previous');
+      const landCardNextButton = document.querySelector('.land-card-gallery .gallery-control.next');
+      let activeLandCardFigure = 0;
+
+      function showLandCardFigure(index) {
+        activeLandCardFigure = (index + landCardFigures.length) % landCardFigures.length;
+        const figure = landCardFigures[activeLandCardFigure];
+
+        landCardImage.src = figure.src;
+        landCardImage.alt = figure.alt;
+        landCardLabel.textContent = figure.label;
+      }
+
+      landCardPreviousButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showLandCardFigure(activeLandCardFigure - 1);
+      });
+
+      landCardNextButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showLandCardFigure(activeLandCardFigure + 1);
+      });
+
+      const tropicalCardFigures = [
+        {
+          src: './figures/tropical-climate-dynamics/GRL21_Walker.png',
+          alt: 'Walker circulation response figure',
+          label: 'Mechanisms of Walker circulation changes to increasing CO2',
+        },
+        {
+          src: './figures/tropical-climate-dynamics/SO_ITCZ.png',
+          alt: 'Southern Ocean to tropical teleconnection and double ITCZ bias',
+          label: 'Tropical mean-state bias weakens the Southern Ocean to tropical teleconnection (illustration generated by ChatGPT)',
+        },
+      ];
+
+      const tropicalCardImage = document.querySelector('.tropical-card-gallery-image');
+      const tropicalCardLabel = document.querySelector('.tropical-card-gallery-label');
+      const tropicalCardPreviousButton = document.querySelector('.tropical-card-gallery .gallery-control.previous');
+      const tropicalCardNextButton = document.querySelector('.tropical-card-gallery .gallery-control.next');
+      let activeTropicalCardFigure = 0;
+
+      function showTropicalCardFigure(index) {
+        activeTropicalCardFigure = (index + tropicalCardFigures.length) % tropicalCardFigures.length;
+        const figure = tropicalCardFigures[activeTropicalCardFigure];
+
+        tropicalCardImage.src = figure.src;
+        tropicalCardImage.alt = figure.alt;
+        tropicalCardLabel.textContent = figure.label;
+      }
+
+      tropicalCardPreviousButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showTropicalCardFigure(activeTropicalCardFigure - 1);
+      });
+
+      tropicalCardNextButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showTropicalCardFigure(activeTropicalCardFigure + 1);
+      });
+    </script>
+  </body>
+</html>

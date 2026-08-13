@@ -1,0 +1,17 @@
+.DS_Store
+*/.DS_Store
+.venv/
+__pycache__/
+
+# Source/work files that are not needed for the published website.
+*.pptx
+~$*
+
+# Large local backups and source frame archives.
+*-original.png
+*-original.jpg
+*-original.jpeg
+*-original.JPG
+*.zip
+research/figures/land-climate-extremes/mix-length-composite/
+!research/figures/land-climate-extremes/mix-length-composite.gif

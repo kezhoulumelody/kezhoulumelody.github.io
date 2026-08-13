@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Physical scaling of extratropical climate extremes research by Kezhou Lu." />
+    <title>Physical Scaling of Extratropical Climate Extremes | Kezhou Lu</title>
+    <link rel="icon" type="image/png" href="../../home/figures/Icon.png?v=20260808" />
+    <link rel="stylesheet" href="../../styles.css?v=20260809-research" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../../home/">Kezhou (Melody) Lu</a>
+        <nav class="nav-links">
+          <a href="../../home/">Home</a>
+          <a href="../../research/">Research</a>
+          <a href="../../group/">Group</a>
+          <a href="../../publications/">Publications</a>
+          <a href="../../teaching/">Teaching</a>
+          <a href="../../contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section research-detail">
+        <div class="container detail-container">
+          <a class="back-link" href="../">&larr; Back to Research</a>
+          <h1>Physical Scaling of Extratropical Climate Extremes</h1>
+          <p>Climate extremes, including heat waves, cold spells, and intense precipitation, can profoundly affect ecosystems, infrastructure, economies, and human well-being. These events arise from complex interactions among atmospheric circulation, land and ocean conditions, and the changing background climate, making their physical causes and future changes difficult to understand.</p>
+          <p>In this research theme, we combine simple physical theories with numerical experiments to identify the mechanisms that shape extratropical climate extremes. By isolating essential processes within complex climate systems, we seek to explain why extremes occur, how they respond to climate change, and how their future projections can be better constrained.</p>
+
+          <section class="theme-subsections">
+            <details class="theme-subsection">
+              <summary>Thermodynamical and dynamical constraints on extratropical temperature distribution</summary>
+              <figure class="subsection-figure">
+                <img src="../figures/land-climate-extremes/LWA_and_Lagrangian_displacement.jpg" alt="Local wave activity and Lagrangian displacement constraints on extratropical temperature distribution" />
+                <figcaption>Synoptic temperature variability arises from synoptic advection away from a Lagrangian-mean background temperature</figcaption>
+              </figure>
+              <p>Temperature extremes occur in the cold and warm tails of the temperature distribution and can have major societal and economic impacts. Because these distributions are often non-Gaussian, knowing only how the mean and variance change is not enough to explain how extremes will respond to climate warming. We therefore need a physical way to understand how the full temperature distribution is formed and how it may change.</p>
+              <p>In the extratropical lower troposphere, daily temperature anomalies are strongly shaped by synoptic weather systems that move air masses northward and southward across the background temperature gradient. A warm or cold anomaly depends on both how far the air is displaced and the temperature contrast between where the air comes from and where it arrives.</p>
+              <p>We develop a Lagrangian eddy-mixing framework that separates these two effects. Equivalent latitude and local finite-amplitude wave activity are used to quantify the effective meridional displacement of air masses, while the Lagrangian-mean temperature profile describes the background thermodynamic structure. Combining the displacement with this background profile allows us to reconstruct daily temperature fields and their probability distributions.</p>
+              <p class="subsection-note">Currently ongoing</p>
+            </details>
+
+            <details class="theme-subsection">
+              <summary>Quantifying land-atmosphere contributions to wintertime midlatitude surface air temperature variability</summary>
+              <figure class="subsection-figure subsection-gallery land-atmosphere-gallery">
+                <img class="land-atmosphere-gallery-image" src="../figures/land-climate-extremes/mix-length-composite.gif" alt="Animated simple framework for understanding temperature variance" />
+                <figcaption class="land-atmosphere-gallery-caption">A simple framework to understand temperature variance</figcaption>
+                <button class="gallery-control previous" type="button" aria-label="Previous land-atmosphere figure">&lsaquo;</button>
+                <button class="gallery-control next" type="button" aria-label="Next land-atmosphere figure">&rsaquo;</button>
+              </figure>
+              <p>While large-scale atmospheric advection dominates synoptic temperature variability above the boundary layer (e.g., above 850 hPa), the physical processes become much more complex when interactions with land and ocean surfaces are involved.</p>
+              <p>From the perspective of Lagrangian advection, temperature variance increases when atmospheric circulation moves air parcels across regions with strong background temperature gradients and allows them to travel long distances before mixing. How far these parcels travel depends on how much energy they lose through interactions with the land surface. This provides an intuitive picture of why displacement, or the mixing length, can be linked to land-atmosphere interactions.</p>
+              <p>To make this idea quantitative, we use a simple one-dimensional stochastic model for near-surface temperature anomalies. In this framework, Brownian motion represents random synoptic winds, while diabatic processes are idealized as linear damping. The model links temperature variance to three basic ingredients: the background temperature gradient, the strength of stochastic advection, and the damping rate set by surface interactions.</p>
+              <div class="equation-block" aria-label="Simple stochastic temperature variance framework">
+                <p><span>dT<sub>s</sub>' = -&alpha;T<sub>s</sub>'dt - G&sigma;dW<sub>t</sub></span></p>
+                <p><span>G = &part;<sub>y</sub><span class="overline">&theta;</span><sub>s</sub></span></p>
+                <p><span><span class="overline">T<sub>s</sub>'<sup>2</sup></span> = (&sigma;<sup>2</sup> / 2&alpha;)G<sup>2</sup> = (D / &alpha;)G<sup>2</sup></span></p>
+                <p><span>&ell;<sub>m</sub><sup>2</sup> = D / &alpha;</span></p>
+              </div>
+              <p>Here, &alpha; is the damping rate, &sigma; measures the amplitude of stochastic synoptic winds, D = &sigma;<sup>2</sup> / 2 is the effective diffusivity, and &ell;<sub>m</sub> is the mixing length. A larger mixing length means that air parcels can travel farther across the background temperature gradient before being damped, increasing near-surface temperature variance.</p>
+              <p>We then extend this idealized picture to a more realistic atmosphere using a column-integrated moist static energy framework. By considering the covariance budget between moist static energy and near-surface temperature, the same physical balance can be written in a form that links temperature variance to energetic forcing and damping. Details are given in the related publication, but the resulting scaling has a similar structure:</p>
+              <div class="equation-block" aria-label="Moist static energy scaling for mixing length">
+                <p><span>&ell;<sub>m</sub><sup>2</sup> = &epsilon;C<sub>a</sub>D / &alpha;</span></p>
+              </div>
+              <p>Here, &epsilon;C<sub>a</sub>D represents the effective energetic source of temperature variance, while &alpha; measures the sensitivity between near-surface temperature and energetic fluxes. In this more realistic framework, the mixing length is still controlled by a competition between processes that generate temperature variance and processes that damp it through land-atmosphere exchange.</p>
+              <p>We test this framework in climate models and find that changes in &alpha; strongly influence temperature variance. In the Community Earth System Model, different versions of the Community Land Model, CLM4 and CLM5, simulate different values of &alpha;, motivating experiments that isolate the role of land-atmosphere coupling.</p>
+              <p>We use CLM4 experiments to perturb land-surface coupling and NudUV experiments to constrain large-scale horizontal winds. The NudUV experiments show that changing large-scale synoptic circulation alone produces only modest changes in temperature variance. In contrast, the CLM4 experiments produce a smaller &alpha;, which increases the mixing length and leads to larger temperature variance.</p>
+              <p class="subsection-note"><a href="https://doi.org/10.1029/2025GL120713" target="_blank" rel="noreferrer">Geophysical Research Letters, 2026 &rarr;</a></p>
+            </details>
+
+            <details class="theme-subsection">
+              <summary>Mechanisms of Southern Hemisphere midlatitude surface air temperature variability under climate warming</summary>
+              <figure class="subsection-figure subsection-gallery southern-hemisphere-gallery">
+                <img class="southern-hemisphere-gallery-image" src="../figures/land-climate-extremes/SouthernHemisphere_DJF.jpg" alt="Southern Hemisphere midlatitude surface air temperature variability changes during austral summer" />
+                <figcaption class="southern-hemisphere-gallery-caption">Contributions to projected future changes in near-surface temperature variance in DJF.</figcaption>
+                <button class="gallery-control previous" type="button" aria-label="Previous Southern Hemisphere figure">&lsaquo;</button>
+                <button class="gallery-control next" type="button" aria-label="Next Southern Hemisphere figure">&rsaquo;</button>
+              </figure>
+              <p>Building on the framework above, this study applies the same physical scaling idea to Southern Hemisphere midlatitude temperature variability over the ocean, where the effect of evaporation becomes especially important.</p>
+              <p>Unlike over land, where evaporation can be limited by soil moisture and vegetation, evaporation over the ocean is more directly related to surface saturation humidity, whose temperature dependence follows the Clausius-Clapeyron relation. As a result, we can explicitly quantify how latent heat flux covaries with near-surface temperature and temperature variance as follows:</p>
+              <div class="equation-block" aria-label="Latent heat flux covariance with temperature variance">
+                <p><span><span class="overline">L T<sub>b</sub>' E'</span> = -&alpha;<sub>m</sub>L&gamma;H<span class="overline">T<sub>b</sub>'<sup>2</sup></span></span></p>
+              </div>
+              <p>Here, &alpha;<sub>m</sub> represents evaporative damping, L is latent heat, &gamma; describes the temperature sensitivity of saturation specific humidity, and H is the climatological relative humidity.</p>
+              <p>Using the Community Earth System Model version 2 Large Ensemble, we examine how subseasonal surface air temperature variance changes under climate warming. The simulations show that temperature variance intensifies and shifts poleward over the South Pacific and South Atlantic Oceans during austral summer. During austral winter, variance increases over the Indian and South Pacific Oceans but weakens in subpolar regions.</p>
+              <p>The scaling framework relates these changes to near-surface horizontal advection and the net energetic forcing of the atmospheric column. Estimated changes from this framework closely match the simulated responses, showing that stronger dry static energy and moist static energy gradients outweigh the damping effects of changes in diffusivity and evaporative cooling. These results provide a physical explanation for Southern Hemisphere midlatitude temperature-variance changes under warming and highlight the roles of energetic and moisture constraints.</p>
+              <p class="subsection-note"><a href="https://journals.ametsoc.org/view/journals/clim/39/13/JCLI-D-25-0435.1.xml" target="_blank" rel="noreferrer">Journal of Climate, 2026 &rarr;</a></p>
+            </details>
+          </section>
+
+          <section class="related-publications">
+            <h2>Related Publications</h2>
+            <article class="related-publication">
+              <p class="publication-meta">GRL &middot; 2026</p>
+              <h3>The role of land-atmosphere feedback on midlatitude wintertime surface temperature variability</h3>
+              <a href="https://doi.org/10.1029/2025GL120713" target="_blank" rel="noreferrer">Read paper &rarr;</a>
+            </article>
+            <article class="related-publication">
+              <p class="publication-meta">Journal of Climate &middot; 2026</p>
+              <h3>Mechanisms of Southern Hemisphere Midlatitude Surface Air Temperature Variability under Climate Warming in the CESM2 Large Ensemble (LENS2)</h3>
+              <a href="https://journals.ametsoc.org/view/journals/clim/39/13/JCLI-D-25-0435.1.xml" target="_blank" rel="noreferrer">Read paper &rarr;</a>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Kezhou (Melody) Lu. All rights reserved.</p>
+      </div>
+    </footer>
+    <script>
+      const landAtmosphereFigures = [
+        {
+          src: '../figures/land-climate-extremes/mix-length-composite.gif',
+          alt: 'Animated simple framework for understanding temperature variance',
+          caption: 'A simple framework to understand temperature variance',
+        },
+        {
+          src: '../figures/land-climate-extremes/MSE_framework.png',
+          alt: 'Moist static energy framework for near-surface temperature variance',
+          caption: 'Stochastic perspective of temperature variability vs. the variance budget of column-integrated atmospheric energy',
+        },
+        {
+          src: '../figures/land-climate-extremes/GRL26_TempVar_v1.png',
+          alt: 'Quantifying land-atmosphere contributions to wintertime midlatitude surface air temperature variability',
+          caption: 'Quantifying land-atmosphere contributions to wintertime midlatitude surface air temperature variability',
+        },
+        {
+          src: '../figures/land-climate-extremes/experiment_land-mixing-length.jpg',
+          alt: 'Land-atmosphere feedback modulates changes in mixing length',
+          caption: 'Land-atmosphere feedback modulates changes in mixing length',
+        },
+      ];
+
+      const landAtmosphereImage = document.querySelector('.land-atmosphere-gallery-image');
+      const landAtmosphereCaption = document.querySelector('.land-atmosphere-gallery-caption');
+      const landAtmospherePreviousButton = document.querySelector('.land-atmosphere-gallery .gallery-control.previous');
+      const landAtmosphereNextButton = document.querySelector('.land-atmosphere-gallery .gallery-control.next');
+      let activeLandAtmosphereFigure = 0;
+
+      function showLandAtmosphereFigure(index) {
+        activeLandAtmosphereFigure = (index + landAtmosphereFigures.length) % landAtmosphereFigures.length;
+        const figure = landAtmosphereFigures[activeLandAtmosphereFigure];
+
+        landAtmosphereImage.src = figure.src;
+        landAtmosphereImage.alt = figure.alt;
+        landAtmosphereCaption.textContent = figure.caption;
+      }
+
+      landAtmospherePreviousButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showLandAtmosphereFigure(activeLandAtmosphereFigure - 1);
+      });
+
+      landAtmosphereNextButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showLandAtmosphereFigure(activeLandAtmosphereFigure + 1);
+      });
+
+      const southernHemisphereFigures = [
+        {
+          src: '../figures/land-climate-extremes/SouthernHemisphere_DJF.jpg',
+          alt: 'Southern Hemisphere midlatitude surface air temperature variability changes during austral summer',
+          caption: 'Contributions to projected future changes in near-surface temperature variance in DJF.',
+        },
+        {
+          src: '../figures/land-climate-extremes/SouthernHemisphere_JJA.jpg',
+          alt: 'Southern Hemisphere midlatitude surface air temperature variability changes during austral winter',
+          caption: 'Contributions to projected future changes in near-surface temperature variance in JJA.',
+        },
+      ];
+
+      const southernHemisphereImage = document.querySelector('.southern-hemisphere-gallery-image');
+      const southernHemisphereCaption = document.querySelector('.southern-hemisphere-gallery-caption');
+      const southernHemispherePreviousButton = document.querySelector('.southern-hemisphere-gallery .gallery-control.previous');
+      const southernHemisphereNextButton = document.querySelector('.southern-hemisphere-gallery .gallery-control.next');
+      let activeSouthernHemisphereFigure = 0;
+
+      function showSouthernHemisphereFigure(index) {
+        activeSouthernHemisphereFigure = (index + southernHemisphereFigures.length) % southernHemisphereFigures.length;
+        const figure = southernHemisphereFigures[activeSouthernHemisphereFigure];
+
+        southernHemisphereImage.src = figure.src;
+        southernHemisphereImage.alt = figure.alt;
+        southernHemisphereCaption.textContent = figure.caption;
+      }
+
+      southernHemispherePreviousButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showSouthernHemisphereFigure(activeSouthernHemisphereFigure - 1);
+      });
+
+      southernHemisphereNextButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        showSouthernHemisphereFigure(activeSouthernHemisphereFigure + 1);
+      });
+    </script>
+  </body>
+</html>

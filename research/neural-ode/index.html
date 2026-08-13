@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Physics-informed AI for climate dynamics and prediction research by Kezhou Lu." />
+    <title>Physics-Informed AI for Climate Dynamics and Prediction | Kezhou Lu</title>
+    <link rel="icon" type="image/png" href="../../home/figures/Icon.png?v=20260808" />
+    <link rel="stylesheet" href="../../styles.css?v=20260809-research" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container nav">
+        <a class="brand" href="../../home/">Kezhou (Melody) Lu</a>
+        <nav class="nav-links">
+          <a href="../../home/">Home</a>
+          <a href="../../research/">Research</a>
+          <a href="../../group/">Group</a>
+          <a href="../../publications/">Publications</a>
+          <a href="../../teaching/">Teaching</a>
+          <a href="../../contact/">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page-content">
+      <section class="section research-detail">
+        <div class="container detail-container">
+          <a class="back-link" href="../">&larr; Back to Research</a>
+          <h1>Physics-Informed AI for Climate Dynamics and Prediction</h1>
+          <p>Machine learning can improve the understanding and prediction of complex climate phenomena, but fully data-driven models often require large datasets and may lack stability and physical interpretability. Traditional reduced-order dynamical models, such as recharge-oscillator and quasi-geostrophic models, provide simple and physically interpretable frameworks for understanding climate variability, but their simplified structures may miss important nonlinear and state-dependent interactions.</p>
+          <p>In this theme, we develop hybrid frameworks that combine physically interpretable linear dynamics with neural-network residuals. Linear ordinary differential equations represent the dominant relationships among climate variables, while the neural component learns unresolved nonlinear interactions not captured by the linear system. This design retains the stability and interpretability of simple dynamical systems while allowing the model to learn complex climate interactions from data.</p>
+          <section class="theme-subsections">
+            <details class="theme-subsection">
+              <summary>An ENSO Forecasting Example with a Neural Extended Recharge Oscillator</summary>
+              <figure class="subsection-figure">
+                <img src="../figures/nerul-ode/NXRO_illustration.jpg" alt="Neural extended recharge oscillator framework for ENSO forecasting" />
+                <figcaption>Neural extended recharge oscillator framework for ENSO forecasting.</figcaption>
+              </figure>
+              <p>We demonstrate this framework using El Niño-Southern Oscillation (ENSO) forecasting as an example. Skillful ENSO prediction requires representing interactions between ENSO and other ocean basins, but these teleconnections are nonlinear and complex.</p>
+              <p>Building on the physics-based Extended Recharge Oscillator (XRO), we retain the linear recharge-oscillator dynamics that represent the coupled evolution of ENSO sea surface temperature (SST) and upper-ocean heat content. A neural residual component then learns nonlinear cross-basin interactions that are not captured by the linear system.</p>
+              <p>When trained on the limited observational record, the hybrid model improves ENSO forecast skill relative to the XRO baseline, including a 13.2% reduction in RMSE. The small hybrid model also enables real-time ENSO forecasting. Alongside the CCSR/IRI prediction plume, it predicts a strong 2026 El Niño, with a JJA Niño-3.4 anomaly of +1.57 °C and substantially greater warming later in the year.</p>
+              <p class="subsection-note">Currently ongoing</p>
+            </details>
+          </section>
+
+          <section class="related-publications">
+            <h2>Related Publications</h2>
+            <article class="related-publication">
+              <p class="publication-meta">Preprint available upon request</p>
+              <h3>Neural Hybrid Residual XRO Models for ENSO Forecasting</h3>
+              <a href="../../publications/">View publications &rarr;</a>
+            </article>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© 2026 Kezhou (Melody) Lu. All rights reserved.</p>
+      </div>
+    </footer>
+  </body>
+</html>
