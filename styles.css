@@ -673,12 +673,15 @@ a:hover {
 }
 
 .person-photo-placeholder {
-  display: grid;
-  place-items: center;
-  background: var(--bg);
-  color: var(--accent);
-  font-size: 3rem;
-  font-weight: 700;
+  background: #ffffff;
+}
+
+.person-photo-placeholder img {
+  box-sizing: border-box;
+  padding: 0.65rem;
+  object-fit: contain;
+  object-position: center;
+  opacity: 0.10;
 }
 
 .student-photo-frame img {
