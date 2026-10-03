@@ -672,6 +672,23 @@ a:hover {
   object-position: 30% 25%;
 }
 
+.person-photo-placeholder {
+  display: grid;
+  place-items: center;
+  background: var(--bg);
+  color: var(--accent);
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.student-photo-frame img {
+  object-position: 50% 25%;
+}
+
+.student-photo-frame .ryan-portrait {
+  object-position: 60% 50%;
+}
+
 .person-bio h4 {
   margin: 0 0 0.25rem;
   color: var(--text);
